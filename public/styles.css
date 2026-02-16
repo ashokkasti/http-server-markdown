@@ -1,16 +1,193 @@
 /* General styles */
 :root {
+  /* Sepia Theme (Default) */
+  --primary-color: #8b5cf6; /* Soft violet/brownish suitable for sepia */
+  --secondary-color: #7c3aed;
+  --text-color: #433422;
+  --border-color: #d7c9b1;
+  --bg-color: #f1e7d0;
+  --sidebar-bg: #eaddc5;
+  --card-bg: #eaddc5;
+  --hover-color: #e3d0b0;
+  --active-color: #d7c9b1;
+  --code-bg: #fdf6e3;
+  --heading-color: #2b2014;
+  --muted-color: #786655;
+  --modal-bg: #eaddc5;
+  --modal-border: #d7c9b1;
+}
+
+/* Light Theme */
+body.theme-light {
   --primary-color: #2563eb;
   --secondary-color: #1e40af;
   --text-color: #374151;
   --border-color: #e5e7eb;
   --bg-color: #f9fafb;
+  --sidebar-bg: #ffffff;
+  --card-bg: #ffffff;
   --hover-color: #f3f4f6;
   --active-color: #e5e7eb;
+  --code-bg: #f8fafc;
+  --heading-color: #1e293b;
+  --muted-color: #64748b;
+  --modal-bg: #ffffff;
+  --modal-border: #e5e7eb;
+}
+
+/* Solarized Light Theme */
+body.theme-solarized-light {
+  --primary-color: #268bd2;
+  --secondary-color: #2aa198;
+  --text-color: #586e75;
+  --border-color: #dee2e6; /* slightly adjusted for visibility */
+  --bg-color: #fdf6e3;
+  --sidebar-bg: #eee8d5;
+  --card-bg: #eee8d5;
+  --hover-color: #e6dfc8;
+  --active-color: #d3cbb7;
+  --code-bg: #fdf6e3;
+  --heading-color: #073642;
+  --muted-color: #93a1a1;
+  --modal-bg: #eee8d5;
+  --modal-border: #d3cbb7;
+}
+
+/* Nord Theme */
+body.theme-nord {
+  --primary-color: #88c0d0;
+  --secondary-color: #81a1c1;
+  --text-color: #d8dee9;
+  --border-color: #434c5e;
+  --bg-color: #2e3440;
+  --sidebar-bg: #3b4252;
+  --card-bg: #3b4252;
+  --hover-color: #434c5e;
+  --active-color: #4c566a;
+  --code-bg: #2e3440;
+  --heading-color: #eceff4;
+  --muted-color: #96a0a9;
+  --modal-bg: #3b4252;
+  --modal-border: #4c566a;
+  --hover-color: #f3f4f6;
+  --active-color: #e5e7eb;
+  --code-bg: #f8fafc;
+  --heading-color: #1e293b;
+  --muted-color: #64748b;
+}
+
+/* Dark Theme */
+body.theme-dark {
+  --primary-color: #60a5fa;
+  --secondary-color: #3b82f6;
+  --text-color: #e2e8f0;
+  --border-color: #334155;
+  --bg-color: #0f172a;
+  --sidebar-bg: #1e293b;
+  --card-bg: #1e293b;
+  --hover-color: #334155;
+  --active-color: #475569;
+  --code-bg: #020617;
+  --heading-color: #f1f5f9;
+  --muted-color: #94a3b8;
+  --modal-bg: #1e293b;
+  --modal-border: #334155;
+}
+
+/* Ocean Theme */
+body.theme-ocean {
+  --primary-color: #0ea5e9;
+  --secondary-color: #0284c7;
+  --text-color: #f0f9ff;
+  --border-color: #0c4a6e;
+  --bg-color: #082f49;
+  --sidebar-bg: #0c4a6e;
+  --card-bg: #0c4a6e;
+  --hover-color: #075985;
+  --active-color: #0369a1;
+  --code-bg: #082f49;
+  --heading-color: #e0f2fe;
+  --muted-color: #bae6fd;
+  --modal-bg: #0c4a6e;
+  --modal-border: #075985;
+}
+
+/* Forest Theme */
+body.theme-forest {
+  --primary-color: #22c55e;
+  --secondary-color: #16a34a;
+  --text-color: #ecfccb;
+  --border-color: #365314;
+  --bg-color: #14532d;
+  --sidebar-bg: #1a2e05;
+  --card-bg: #1a2e05;
+  --hover-color: #3f6212;
+  --active-color: #4d7c0f;
+  --code-bg: #14532d;
+  --heading-color: #f7fee7;
+  --muted-color: #d9f99d;
+  --modal-bg: #1a2e05;
+  --modal-border: #365314;
+}
+
+/* Sunset Theme */
+body.theme-sunset {
+  --primary-color: #f97316;
+  --secondary-color: #ea580c;
+  --text-color: #fff7ed;
+  --border-color: #7c2d12;
+  --bg-color: #431407;
+  --sidebar-bg: #7c2d12;
+  --card-bg: #7c2d12;
+  --hover-color: #9a3412;
+  --active-color: #c2410c;
+  --code-bg: #431407;
+  --heading-color: #ffedd5;
+  --muted-color: #fed7aa;
+  --modal-bg: #431407;
+  --modal-border: #7c2d12;
+}
+
+/* Fonts */
+body.font-sans {
+  font-family:
+    "DM Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+body.font-serif {
+  font-family: "Merriweather", serif;
+}
+
+body.font-mono {
+  font-family: "Fira Code", monospace;
 }
 
 body {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  font-family:
+    "DM Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   font-size: 0.9rem;
   color: var(--text-color);
   height: 100vh;
@@ -30,7 +207,7 @@ body {
 
 /* Sidebar styles */
 .sidebar {
-  background-color: white;
+  background-color: var(--sidebar-bg);
   border-right: 1px solid var(--border-color);
   padding: 0;
   height: 100vh;
@@ -44,7 +221,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: var(--sidebar-bg);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -87,7 +264,7 @@ body {
 .directory-icon {
   margin-right: 8px;
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--muted-color);
 }
 
 .directory-item-header.active .directory-icon {
@@ -149,7 +326,7 @@ body {
 
 .preview-container {
   padding: 25px;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
@@ -179,7 +356,7 @@ body {
   margin-top: 1.8em;
   margin-bottom: 0.6em;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--heading-color);
 }
 
 .markdown-content h1 {
@@ -207,7 +384,7 @@ body {
 }
 
 .markdown-content pre {
-  background-color: #f8fafc;
+  background-color: var(--code-bg);
   border-radius: 6px;
   padding: 16px;
   overflow: auto;
@@ -219,7 +396,8 @@ body {
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 3px;
   padding: 0.2em 0.4em;
-  font-family: 'Fira Code', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-family:
+    "Fira Code", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.85em;
 }
 
@@ -227,7 +405,7 @@ body {
   background-color: transparent;
   padding: 0;
   font-size: 0.85em;
-  color: #334155;
+  color: var(--text-color);
 }
 
 .markdown-content blockquote {
@@ -263,18 +441,18 @@ body {
 }
 
 .markdown-content table th {
-  background-color: #f1f5f9;
+  background-color: var(--hover-color);
   font-weight: 500;
   text-align: left;
 }
 
 .markdown-content table tr {
-  background-color: #fff;
-  border-top: 1px solid #e2e8f0;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border-color);
 }
 
 .markdown-content table tr:nth-child(2n) {
-  background-color: #f8fafc;
+  background-color: var(--hover-color);
 }
 
 .markdown-content ul,
@@ -290,4 +468,38 @@ body {
 /* Mermaid diagrams */
 .mermaid {
   margin: 20px 0;
+}
+
+/* Modal Styling to match themes */
+.modal-content {
+  background-color: var(--modal-bg);
+  color: var(--text-color);
+  border: 1px solid var(--modal-border);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--modal-border);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--modal-border);
+}
+
+.btn-close {
+  filter: invert(var(--invert-icon, 0));
+}
+
+/* Invert close button for dark themes */
+body.theme-dark .btn-close,
+body.theme-ocean .btn-close,
+body.theme-forest .btn-close,
+body.theme-sunset .btn-close,
+body.theme-nord .btn-close {
+  --invert-icon: 1;
+}
+
+body.theme-sepia .btn-close,
+body.theme-solarized-light .btn-close,
+body.theme-light .btn-close {
+  --invert-icon: 0;
 }
