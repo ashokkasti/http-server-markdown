@@ -64,6 +64,8 @@ jobs:
     # ============= InvisiRisk Setup End =============
     - name: Checkout repository
       uses: actions/checkout@v4
+    - name: Install NPM packages
+      run npm install
 
     # Add any setup steps before running the `github/codeql-action/init` action.
     # This includes steps like installing compilers or runtimes (`actions/setup-node`
